@@ -19,7 +19,7 @@ namespace Laba2_LFSR
 
         private const int _registerSize = 35;
 
-        private string _fileInput, _fileOutput;
+        private string _fileInput = "", _fileOutput = "";
 
         private BitArray _arrInputText, _arrOutputText, _arrInitialState, _arrKey;
 
@@ -77,16 +77,16 @@ namespace Laba2_LFSR
         }
 
         private BitArray getInputText(string fileName)
-        {
+        { 
             List<Byte> list = new List<Byte>();
             using (BinaryReader reader = new BinaryReader(File.Open(fileName, FileMode.Open)))
             {
-                while (reader.BaseStream.Position < reader.BaseStream.Length)  
+                while (reader.BaseStream.Position < reader.BaseStream.Length)
                     list.Add(reader.ReadByte());
             }
 
             BitArray arr = new BitArray(list.ToArray());
-            return arr;
+            return arr;     
         }
 
         private void txtbInitialState_TextChanged(object sender, EventArgs e)
@@ -154,19 +154,24 @@ namespace Laba2_LFSR
 
             if (_strInitialState.Length >= _registerSize)
             {
-                _strInitialState = _strInitialState.Substring(0, _registerSize);
-                txtbInitialState.Text = _strInitialState;
-                _arrInitialState = convertStrToBitArray(_strInitialState);
+                if (_fileInput != "" && _fileOutput != "")
+                {
+                    _strInitialState = _strInitialState.Substring(0, _registerSize);
+                    txtbInitialState.Text = _strInitialState;
+                    _arrInitialState = convertStrToBitArray(_strInitialState);
 
-                _arrInputText = getInputText(_fileInput);
-                txtbInputText.Text = convertBitArrayToStr(_arrInputText);
+                    _arrInputText = getInputText(_fileInput);
+                    txtbInputText.Text = convertBitArrayToStr(_arrInputText);
 
-                _arrKey = generateKey(_arrInitialState, _arrInputText.Length);
-                txtbKey.Text = convertBitArrayToStr(_arrKey);
+                    _arrKey = generateKey(_arrInitialState, _arrInputText.Length);
+                    txtbKey.Text = convertBitArrayToStr(_arrKey);
 
-                _arrOutputText = getOutputText(_arrInputText, _arrKey);
-                txtbOutputText.Text = convertBitArrayToStr(_arrOutputText);
-                setOutputText(_arrOutputText, _fileOutput);
+                    _arrOutputText = getOutputText(_arrInputText, _arrKey);
+                    txtbOutputText.Text = convertBitArrayToStr(_arrOutputText);
+                    setOutputText(_arrOutputText, _fileOutput);
+                }
+                else
+                    MessageBox.Show("Ошибка открытия файла", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
                 MessageBox.Show("Введённая строка содержит только " + _strInitialState.Length.ToString() + " правильных символа/символов", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
