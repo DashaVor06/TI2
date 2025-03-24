@@ -152,19 +152,24 @@ namespace Laba2_LFSR
         {
             clearAll();
 
-            _strInitialState = _strInitialState.Substring(0, _registerSize);
-            txtbInitialState.Text = _strInitialState;
-            _arrInitialState = convertStrToBitArray(_strInitialState);
+            if (_strInitialState.Length >= _registerSize)
+            {
+                _strInitialState = _strInitialState.Substring(0, _registerSize);
+                txtbInitialState.Text = _strInitialState;
+                _arrInitialState = convertStrToBitArray(_strInitialState);
 
-            _arrInputText = getInputText(_fileInput);
-            txtbInputText.Text = convertBitArrayToStr(_arrInputText);
+                _arrInputText = getInputText(_fileInput);
+                txtbInputText.Text = convertBitArrayToStr(_arrInputText);
 
-            _arrKey = generateKey(_arrInitialState, _arrInputText.Length);
-            txtbKey.Text = convertBitArrayToStr(_arrKey);
+                _arrKey = generateKey(_arrInitialState, _arrInputText.Length);
+                txtbKey.Text = convertBitArrayToStr(_arrKey);
 
-            _arrOutputText = getOutputText(_arrInputText, _arrKey);
-            txtbOutputText.Text = convertBitArrayToStr(_arrOutputText);
-            setOutputText(_arrOutputText, _fileOutput);
+                _arrOutputText = getOutputText(_arrInputText, _arrKey);
+                txtbOutputText.Text = convertBitArrayToStr(_arrOutputText);
+                setOutputText(_arrOutputText, _fileOutput);
+            }
+            else
+                MessageBox.Show("Введённая строка содержит только " + _strInitialState.Length.ToString() + " правильных символа/символов", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
