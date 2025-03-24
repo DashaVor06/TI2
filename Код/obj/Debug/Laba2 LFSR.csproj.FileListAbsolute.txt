@@ -1,0 +1,20 @@
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2 LFSR.csproj.AssemblyReference.cache
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2_LFSR.fMain.resources
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2_LFSR.Properties.Resources.resources
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2 LFSR.csproj.GenerateResource.cache
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2 LFSR.csproj.CoreCompileInputs.cache
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\bin\Debug\Laba2 LFSR.exe.config
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\bin\Debug\Laba2 LFSR.exe
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\bin\Debug\Laba2 LFSR.pdb
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2 LFSR.exe
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\obj\Debug\Laba2 LFSR.pdb
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\bin\Debug\Laba2 LFSR.exe.config
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\bin\Debug\Laba2 LFSR.exe
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\bin\Debug\Laba2 LFSR.pdb
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2 LFSR.csproj.AssemblyReference.cache
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2_LFSR.fMain.resources
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2_LFSR.Properties.Resources.resources
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2 LFSR.csproj.GenerateResource.cache
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2 LFSR.csproj.CoreCompileInputs.cache
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2 LFSR.exe
+C:\Users\Dasha\Desktop\ТИ\Laba2 LFSR\Код\obj\Debug\Laba2 LFSR.pdb
