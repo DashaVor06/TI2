@@ -65,12 +65,12 @@ namespace Laba2_LFSR
             for (int j = 0; j < count; j++)
             {
                 byte0 = arrInitialState[0] ^ arrInitialState[33];
-                
+                arrKey[j] = arrInitialState[0];
+
                 for (int i = 1; i < arrInitialState.Length; i++)
                     arrInitialState[i - 1] = arrInitialState[i];
 
-                arrInitialState[arrInitialState.Length - 1] = byte0;
-                arrKey[j] = byte0;
+                arrInitialState[arrInitialState.Length - 1] = byte0;     
             }
 
             return arrKey;
